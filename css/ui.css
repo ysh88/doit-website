@@ -199,6 +199,14 @@ body {
 #wrap > h1 {
   font-size: 0;
 }
+header .logo_box {
+  position: absolute;
+  right: 35px;
+  top: 75px;
+}
+header .logo_box img {
+  width: 100px;
+}
 
 #wrap header {
   width: 180px;
@@ -252,6 +260,7 @@ body {
 #wrap header nav ul li.on:after {
   background: #ed3140;
 }
+
 footer {
   width: 180px;
   position: fixed;
@@ -262,30 +271,97 @@ footer {
   font-size: 11px;
   color: #e7e7e7;
 }
-footer address{padding: 0 0 15px 0;}
-footer > a{
+footer address {
+  padding: 0 0 15px 0;
+}
+footer > a {
   display: block;
   width: 16px;
   height: 16px;
   position: absolute;
   top: -31px;
 }
-footer >a.face{ background: url(../images/social_b_facebook.png) no-repeat; right: 20px; transition: .4s; }
-footer >a.face:hover{ background: url(../images/social_b_facebook_hover.png) no-repeat; }
-footer >a.twit{ background: url(../images/social_b_twitter.png) no-repeat; right: 50px;}
-footer >a.twit:hover{ background: url(../images/social_b_twitter_hover.png) no-repeat; }
-footer >a.instar{ background: url(../images/social_b_instar.png) no-repeat; right: 80px;}
-footer >a.instar:hover{ background: url(../images/social_b_instar_hover.png) no-repeat; }
+footer > a.face {
+  background: url(../images/social_b_facebook.png) no-repeat;
+  right: 20px;
+  transition: 0.4s;
+}
+footer > a.face:hover {
+  background: url(../images/social_b_facebook_hover.png) no-repeat;
+}
+footer > a.twit {
+  background: url(../images/social_b_twitter.png) no-repeat;
+  right: 50px;
+}
+footer > a.twit:hover {
+  background: url(../images/social_b_twitter_hover.png) no-repeat;
+}
+footer > a.instar {
+  background: url(../images/social_b_instar.png) no-repeat;
+  right: 80px;
+}
+footer > a.instar:hover {
+  background: url(../images/social_b_instar_hover.png) no-repeat;
+}
+
 #container {
   width: 100%;
   height: 100%;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto; /* 레이아웃 태그 중앙 정렬, cf. 텍스트 => text-align */
+}
+#container .content {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+}
+#container #menu1 {
+  left: 0%;
+  background: url(../images/content_bg1.png) repeat;
+}
+#container #menu2 {
+  left: 25%;
+  background: url(../images/content_bg2.png) repeat;
+}
+#container #menu3 {
+  left: 50%;
+  background: url(../images/content_bg3.png) repeat;
+}
+#container #menu4 {
+  left: 75%;
+  background: url(../images/content_bg4.png) repeat;
 }
 
-header .logo_box {
+#container .content:before,
+#container .content:after {
+  content: "";
+  display: block;
   position: absolute;
-  right: 35px;
-  top: 75px;
+  left: 0;
+  top: 0;
+  z-index: 4;
 }
-header .logo_box img {
-  width: 100px;
+#container .content:after {
+  left: 30px;
+  top: 180px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #ed3140;
 }
+#container #menu1:after {content: "회사소개";}
+#container #menu2:after {content: "도서소개";}
+#container #menu3:after {content: "FAQ";}
+#container #menu4:after {content: "Contact Us";}
+
+#container .content .conbox:before{
+  content: "";
+  display: block;
+  position: absolute;
+}
+#container #menu1 .conbox:before{background: url(../images/main_ico1.png) no-repeat; width: 350px; height: 260px; right:-10px; top:130px; background-size: 100%; }
+#container #menu2 .conbox:before{background: url(../images/main_ico2.png) no-repeat; width: 180px; height: 470px; right:-30px; top:180px; background-size: 100%; }
+#container #menu3 .conbox:before{background: url(../images/main_ico3.png) no-repeat; width: 270px; height: 310px; right:-60px; top:30px; background-size: 100%; }
+#container #menu4 .conbox:before{background: url(../images/main_ico4.png) no-repeat; width: 350px; height: 400px; right:-170px; top:100px; background-size: 100%; }
+#container .content h2{opacity: 0;}
+
