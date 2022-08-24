@@ -594,6 +594,24 @@ footer > a.instar:hover {
   background: url(../images/mackbook.png) no-repeat;
   background-size: 954px;
   position: relative;
+  transform-style: preserve-3d;
+  transform: matrix3d(
+    1, 0, 0, 0, 
+    0, 0.1, 0, 0, 
+    0, 0, 1, 0, 
+    0, 0, 0, 1
+    );
+  transition: all ease-in-out 0.6s;
+  transition-delay: 0.8s;
+  opacity: 0;
+}
+#menu2.this .notebook {
+  transform: matrix3d(
+    1, 0, 0, 0, 
+    0, 1, 0, 0, 
+    0, 0, 1, 0, 
+    0, 0, 0, 1);
+  opacity: 1;
 }
 .detail_content {
   width: 719px;
@@ -615,84 +633,83 @@ footer > a.instar:hover {
   float: left;
   padding: 20px 20px 20px 40px;
 }
-.detail_content:after{
+.detail_content:after {
   content: "";
   display: block;
   clear: both;
 }
-.book_description h4{
+.book_description h4 {
   font-size: 31px;
   font-weight: 700;
   color: #f92d68;
   line-height: 31px;
 }
-.book_description ul li em{
+.book_description ul li em {
   font-weight: 700;
 }
-.point_text{
-  padding:10px 30px 0 0;
+.point_text {
+  padding: 10px 30px 0 0;
   font-size: 12px;
-  color:#666;
+  color: #666;
 }
-.point_text strong{
+.point_text strong {
   display: block;
   background: url(../images/point_bg.png) no-repeat;
   background-size: 40px;
   padding: 0 0 10px 46px;
 }
-.book_rollwrap{
+.book_rollwrap {
   width: 954px;
   height: 150px;
   margin: 40px auto 0 auto;
   padding: 0 20px;
   position: relative;
 }
-.book_rollwrap > button{
+.book_rollwrap > button {
   display: block;
   position: absolute;
   width: 20px;
   height: 100%;
   top: 0;
 }
-.book_rollwrap >button.roll_left{
+.book_rollwrap > button.roll_left {
   background: url(../images/btn_left.png) no-repeat center center;
   background-size: 20px;
   left: 0;
 }
-.book_rollwrap >button.roll_right{
+.book_rollwrap > button.roll_right {
   background: url(../images/btn_right.png) no-repeat center center;
   background-size: 20px;
   right: 0;
 }
-.book_rollwrap .book_roll{
+.book_rollwrap .book_roll {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.book_rollwrap .book_roll ul{
+.book_rollwrap .book_roll ul {
   width: 1000%;
 }
-.book_rollwrap .book_roll ul li{
+.book_rollwrap .book_roll ul li {
   float: left;
   width: 152px;
   text-align: center;
 }
-.book_rollwrap .book_roll ul li img{
+.book_rollwrap .book_roll ul li img {
   width: 100px;
 }
 
-
-.bullet_list{
+.bullet_list {
   margin-top: 20px;
 }
-.bullet_list li{
+.bullet_list li {
   margin-bottom: 5px;
   padding-left: 10px;
   font-size: 12px;
   color: #3c4147;
   position: relative;
 }
-.bullet_list li:after{
+.bullet_list li:after {
   content: "";
   display: block;
   width: 3px;
@@ -700,10 +717,10 @@ footer > a.instar:hover {
   border-radius: 50%;
   background: #3c4147;
   position: absolute;
-  left:0;
+  left: 0;
   top: 8px;
 }
-.commbtn{
+.commbtn {
   display: inline-block;
   width: 150px;
   height: 35px;
@@ -713,9 +730,7 @@ footer > a.instar:hover {
   border-radius: 5px;
   text-align: center;
 }
-.commbtn.pink{
-  background:#f92d68;
+.commbtn.pink {
+  background: #f92d68;
   color: #fff;
 }
-
-

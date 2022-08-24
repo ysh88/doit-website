@@ -18,7 +18,21 @@ $(".logo_box").click(function () {
 
 $(".roll_left").click(function () {
   $(".book_roll li").eq(0).insertAfter(".book_roll li:last-child");
-})
+});
 $(".roll_right").click(function () {
   $(".book_roll li").eq(-1).insertBefore(".book_roll li:first-child");
-})
+});
+
+$(".book_roll li").click(function () {
+  const _this = $(this);
+  const liurl = _this.data("url");
+  $(".notebook").html();
+  $.ajax({
+    type: "post",
+    url: liurl,
+    dataType:"html",
+    success: function (data) {
+      $(".notebook").html(data)
+    }
+  });
+});
