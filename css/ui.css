@@ -727,7 +727,7 @@ footer > a.instar:hover {
   font-weight: 400;
   color: #3c4147;
 }
-.accordio_box ol li.on h4{
+.accordio_box ol li.on h4 {
   background: url(../images/select_bullet_down.png) no-repeat right 11px;
 }
 .accordio_box ol li span {
@@ -735,7 +735,11 @@ footer > a.instar:hover {
   margin-right: 10px;
   font-weight: 900;
 }
-.accordio_box ol li p{height: 0; visibility: hidden; opacity: 0;}
+.accordio_box ol li p {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
 .accordio_box ol li.on p {
   height: auto;
   padding: 30px 100px 70px 200px;
@@ -802,25 +806,25 @@ footer > a.instar:hover {
   background: #3c4147;
   color: #fff;
 }
-#menu4 .content_wrap{
+#menu4 .content_wrap {
   width: 800px;
   margin: 100px auto 0 auto;
   padding: 30px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
 }
-#menu4 .content_wrap .form_tit{
+#menu4 .content_wrap .form_tit {
   margin-bottom: 40px;
   font-size: 24px;
   font-weight: 700;
   color: #ea657b;
 }
-.formlist{
+.formlist {
   padding-bottom: 150px;
   background: url(../images/contact_bg.png) no-repeat right bottom;
   background-size: 200px;
 }
-.formlist ul li{
+.formlist ul li {
   margin-bottom: 15px;
   position: relative;
   padding: 0 0 0 150px;
@@ -830,24 +834,60 @@ footer > a.instar:hover {
   width: 150px;
   position: absolute;
   left: 0;
-  top:0;
+  top: 0;
   font-size: 4px;
   color: #555;
 }
-.formlist ul li label sup{
+.formlist ul li label sup {
   color: #ea657b;
 }
-.formlist ul li span{display: block;}
-.formlist ul li .inputbox{width: 100%; height: 40px; border: 1px solid #ddd; background: #fff;}
-.formlist ul li .textbox{width: 100%; height: 200px; border: 1px solid #ddd; background: #fff;}
-.formlist ul li input, .formlist ul li textarea{
+.formlist ul li span {
+  display: block;
+}
+.formlist ul li .inputbox {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.formlist ul li .textbox {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.formlist ul li input,
+.formlist ul li textarea {
   width: 100%;
   height: 100%;
 }
-.btn_box{
+.btn_box {
   width: 100%;
   margin-top: 20px;
   text-align: center;
 }
-
-
+.thankyou_message {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+.thankyou_message > section > h1 {
+  color: #59c3c3;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.thankyou_message > section{
+  width: 550px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: #fff url(../images/contact_pop.jpg) no-repeat  right bottom;
+  background-size: 240px;
+  color: #3c4147;
+  
+}

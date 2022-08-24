@@ -41,3 +41,8 @@ $(".accordio_box ol li").click(function () {
   $(".accordio_box ol li").removeClass("on");
   $(this).addClass("on");
 })
+
+$(".close").click(function () {
+  console.log(1);
+  $(".thankyou_message").css("display", "none");
+})
